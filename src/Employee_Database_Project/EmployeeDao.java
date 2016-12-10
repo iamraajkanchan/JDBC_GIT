@@ -1,4 +1,4 @@
-package jdbcdemo;
+package Employee_Database_Project;
 
 public interface EmployeeDao 
 {

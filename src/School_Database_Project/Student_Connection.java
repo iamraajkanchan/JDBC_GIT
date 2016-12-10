@@ -99,14 +99,14 @@ public class Student_Connection extends Student {
                 case 1:
                     //Statement myInsertStmt = myCon.createStatement();
                     //CREATE TABLE STUDENT (ROLL_NO INTEGER NOT NULL, FNAME VARCHAR(50) NOT NULL, LNAME VARCHAR(50) NOT NULL, CLASS_DIV VARCHAR(50) NOT NULL, EMAIL VARCHAR(100) NOT NULL);
-                    PreparedStatement myInsertStmt = myCon.prepareStatement();
                     String insert_query = "INSERT INTO SCHOOL_ADMIN.STUDENT (ROLL_NO, FNAME, LNAME, CLASS_DIV, EMAIL) VALUES (?,?,?,?,?)";
+                    PreparedStatement myInsertStmt = myCon.prepareStatement(insert_query);
                     myInsertStmt.setInt(1, getRoll_no());
                     myInsertStmt.setString(2, getfName());
                     myInsertStmt.setString(3, getlName());
                     myInsertStmt.setString(4, getClass_div());
                     myInsertStmt.setString(5, getEmail());
-                    int row_affected = myInsertStmt.executeUpdate(insert_query);
+                    int row_affected = myInsertStmt.executeUpdate();
                     //int row_affected = myInsertStmt.executeUpdate(insert_query);
                     System.out.println(row_affected + " row is inserted in Student Database");
 

@@ -1,4 +1,4 @@
-package jdbcdemo;
+package Employee_Database_Project;
 
 import Employee_Database_Project.Employee;
 import java.sql.*;
