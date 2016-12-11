@@ -18,6 +18,7 @@ public class Student_Connection extends Student {
         System.out.println("Type 2 to insert records in database");
         System.out.println("Type 3 to deleted record from database");
         System.out.println("Type 4 to update existing record in database");
+        System.out.println("Type 5 to exit");
         Scanner input = new Scanner(System.in);
 
         switch (input.nextInt()) {
@@ -32,8 +33,11 @@ public class Student_Connection extends Student {
                 break;
             case 4:
                 update_record();
+                break;
+            case 5:
+                System.exit(0);
             default:
-                System.out.println("Please enter a valid input between 1 to 4");
+                System.out.println("Please enter a valid input between 1 to 5");
         }
     }
 
@@ -52,7 +56,7 @@ public class Student_Connection extends Student {
                 email = myRs.getString("email");
                 System.out.println(roll_no + " -- " + fName + " -- " + lName + " -- " + class_div + " -- " + email);
             }
-
+            quit();
         } catch (Exception E) {
             System.out.println(E.getMessage());
         }
@@ -118,10 +122,11 @@ public class Student_Connection extends Student {
                 default:
                     System.out.println("Please enter a valid input");
             }
-
+            quit();
         } catch (Exception E) {
             E.getMessage();
         }
+
     }
 
     public void delete_record() {
@@ -134,7 +139,7 @@ public class Student_Connection extends Student {
             Statement myStmt = myCon.createStatement();
             int row_affected = myStmt.executeUpdate(delete_query);
             System.out.println(row_affected + " records is deleted from Student Database");
-
+            quit();
         } catch (Exception E) {
             System.out.println(E.getMessage());
         }
@@ -194,8 +199,21 @@ public class Student_Connection extends Student {
                     System.out.println("Please enter the above options only");
                     update_record();
             }
+            quit();
         } catch (Exception E) {
             System.out.println(E.getMessage());
+        }
+
+    }
+
+    public void quit() {
+        Scanner quit = new Scanner(System.in);
+        System.out.println("");
+        System.out.println("Type Yes or Y to quit the application ");
+        if (quit.next() == "Yes" || quit.next() == "Y") {
+            System.exit(0);
+        } else {
+            menu();
         }
     }
 }
