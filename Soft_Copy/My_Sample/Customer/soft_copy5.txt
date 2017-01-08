@@ -1,0 +1,1 @@
+36	H	94401	Bob Hosting Corp.	65653 Lake Road	Suite 2323	San Mateo	CA	650-555-0160	650-555-0161	www.bobhostcorp.example.com	65000	""

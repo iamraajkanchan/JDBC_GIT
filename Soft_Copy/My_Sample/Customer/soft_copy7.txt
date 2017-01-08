@@ -1,0 +1,1 @@
+149	L	95117	John Valley Computers	4381 Kelly Valley Ave	Suite 77	Santa Clara	CA	408-555-0169	408-555-0167	www.johnvalley.example.com	70000	""

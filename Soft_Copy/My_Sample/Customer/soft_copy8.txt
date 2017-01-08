@@ -1,0 +1,1 @@
+863	N	94401	Big Network Systems	456 444th Street	Suite 45	Redwood City	CA	650-555-0181	650-555-0180	www.bignet.example.com	25000	""
